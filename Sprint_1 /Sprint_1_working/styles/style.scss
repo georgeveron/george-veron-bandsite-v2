@@ -1,0 +1,437 @@
+@mixin font-size-regular {
+  font-size: 1rem;
+}
+@mixin font-size-large {
+  font-size: 1.5rem;
+}
+@mixin font-size-x-large {
+  font-size: 2rem;
+}
+
+// Don't fucking touch -----------------------------
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+// NavBar -------------------------------------------
+
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100px;
+  padding: 0;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+  background-color: #323232;
+  top: 0;
+
+@media screen and (min-width: 321px) {
+  height: 80px;
+}
+@media screen and (min-width: 900px) {
+  .nav-bar {
+    padding-left: 180px;
+  }
+}
+
+  &__logo {
+    margin: 1rem;
+    margin-left: 7rem;
+    margin-right: 6rem;
+    margin-bottom: 16px;
+    @media screen and (min-width: 900px) {
+      margin-right: 56px;
+    }
+  }
+
+  &__item-1 {
+    padding-left: 4rem;
+    padding-right: 2rem;
+    color: #FAFAFA;
+    text-decoration: none;
+
+  @media screen and (min-width: 321px) {
+    padding-left: 0px;
+  }
+  @media screen and (min-width: 900px) {
+    margin-right: 56px;
+    padding-right: 0px;
+    width: 80px;
+  }
+  }
+
+  &__item-2 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: #FAFAFA;
+    text-decoration: none;
+
+    @media screen and (min-width: 900px) {
+      margin-left: 0px;
+      padding-left: 0px;
+      width: 80px;
+    }
+  }
+}
+
+
+// Hero Container -----------------------------------
+
+
+.hero-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: row;
+  margin-top: 0;
+  margin-bottom: 1em;
+
+  @media screen and (min-width: 768px) {
+    justify-content: flex-start;
+  }
+
+  &__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5 #323232;
+  }
+
+  &__text {
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 3rem;
+    left: 2rem;
+    margin: 0;
+    color: whitesmoke;
+    font-size: 24px;
+    font-weight: bold;
+// MEDIA QUERY - TABLET 
+  @media screen and (min-width: 321px) {
+    font-size: 60px;
+    width: 50%;
+  }
+  @media screen and (min-width: 900px) {
+    width: 50%;
+    margin-left: 180px;
+  }
+  }
+}
+
+
+// Heading ---------------------------------------------
+
+
+.heading {
+  width: 288px;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0;
+  margin-top: 32px;
+  margin-bottom: 24px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media screen and (min-width: 321px) {
+  .heading {
+    width: 720px;
+    font-size: 60px;
+    font-weight: bold;
+    margin-left: 24px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .heading {
+    margin-left: 180px;
+    margin-bottom: 48px;
+  }
+}
+// Quote and Band Image -----------------------------
+
+
+.layout-card {
+  display: flex;
+  width: 288px;
+  flex-direction: column;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 0px;
+
+  &__image {
+    width: 100%;
+  }
+
+  &__quote {
+    margin-top: 0;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 40px;
+    font-size: 24px;
+    margin-left: 0px;
+  }
+
+  &__description {
+    margin-left: 1rem;
+    font-size: 24px;
+    margin-left: 0px;
+// MEDIA QUERY - TABLET 
+    @media screen and (min-width: 321px) {
+      font-size: 36px;
+    }
+  }
+}
+
+
+@media screen and (min-width: 321px) {
+  .layout-card { 
+    width: 720px;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .layout-card {
+    width: 896px;
+    margin-left: 274px;
+    margin-right: 274px;
+    margin-bottom: 56px;
+  }
+}
+
+
+
+// About Us ------------------------------------------
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 0;
+  
+    &__title {
+      margin-top: 0;
+      margin-bottom: 24px;
+      font-size: 24px;
+      line-height: 32px;
+
+      @media screen and (min-width: 321px) {
+        font-size: 36px;
+      }
+      @media screen and (min-width: 900px) {
+        margin-bottom: 32px;
+      }
+      
+    }
+  
+      &__description {
+        width: 288px;
+        margin-bottom: 32px;
+        margin-left: 0rem;
+        margin-right: 1rem;
+        font-size: 13px;
+        line-height: 18px;
+        @media screen and (min-width: 900px) {
+          width: 420px;
+          margin-bottom: 48px;
+        }
+      }
+    }
+
+@media screen and (min-width: 321px) {
+  .about-us {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-left: 24px;
+    margin-right: 24px;
+    width: 100vw;
+  }
+  &__description {
+    width: 348px;
+    margin-right: 24px;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 900px) {
+  .about-us {
+    margin-left: 0px;
+    margin-left: 274px;
+    display: block;
+  }
+}
+
+// Photo gallery Heading ----------------------
+
+
+.photo-gallery__heading {
+  color: black;
+  margin-top: 32px;
+  margin-bottom: 24px;
+  margin-left: 16px;
+  font-size: 24px;
+}
+
+// MEDIA QUERY - TABLET 
+@media screen and (min-width: 321px) {
+  .photo-gallery__heading {
+    width: 100%;
+    margin-right: 15rem;
+    margin-left: 24px;
+    font-size: 60px;
+  }
+}
+
+
+// Photo Gallery ----------------------------------------
+
+.photo-gallery {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  background-color: #FAFAFA;
+}
+
+@media screen and (min-width: 321px) {
+  .photo-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 900px) {
+  .photo-gallery {
+    padding-left: 160px;
+    padding-right: 160px;
+    padding-bottom: 40px;
+  }
+}
+
+// Photo Gallery Images -------------------------------
+
+
+.photo-card {
+  display: flex;
+  width: 288px;
+  flex-direction: column;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  &__image {
+    width: 100%;
+  }
+}
+
+// MEDIA QUERY - TABLET
+@media screen and (min-width: 321px) {
+  .photo-card {
+    width: 224px;
+    margin-bottom: 24px;
+    margin-left: 24px;
+    margin-right: 0px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .photo-card {
+    width: 344px;
+  }
+}
+
+// footer --------------------------------
+
+
+
+.footer {
+  background-color: #323232;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-bottom: 2rem;
+
+  &__header {
+    color: #FAFAFA; 
+// MEDIA QUERY - TABLET 
+  @media screen and (min-width: 321px) {
+  display: inline-block;
+  margin-right: 48px;
+  }
+  }
+
+  &__social {
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+// MEDIA QUERY - TABLET 
+  @media screen and (min-width: 321px) {
+      display: inline-block;
+      margin-top: 25px;
+  }
+  }
+
+  &__nav-name {
+    color: #FAFAFA;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+    padding-left: 0;
+  }
+  &__nav-address {
+    color: #FAFAFA;
+    font-size: 13px;
+    line-height: 18px;
+    padding-left: 0;
+  }
+  &__nav-email {
+    color: #FAFAFA;
+    font-size: 13px;
+    line-height: 18px;
+    padding-left: 0;
+  }
+
+  &__copyright {
+    color: #FAFAFA;
+    margin-bottom: 32px;
+    font-size: 13px;
+    line-height: 18px;
+    padding-left: 0;
+  }
+}
+
+// MEDIA QUERY - TABLET 
+@media screen and (min-width: 321px) {
+  .footer {
+    padding-left: 24px;
+  }
+  div {
+    width: 230px;
+    margin-right: 24px;
+    display: inline-block;
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .footer {
+    width: 100%;
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+}
+// Notes / Extra -----------------------------------
+
+// @media screen and (min-width: 320px) {
+// } ------ for tablets 
+// Means that once viewport has a min of 320px; the styles within the media query will activiate 
+// @media screen and (min-width: 769px) {
+// } ------ for laptops 

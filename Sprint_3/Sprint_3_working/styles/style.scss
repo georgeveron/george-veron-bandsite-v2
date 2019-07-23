@@ -1,0 +1,981 @@
+@mixin font-size-regular {
+  font-size: 1rem;
+}
+@mixin font-size-large {
+  font-size: 1.5rem;
+}
+@mixin font-size-x-large {
+  font-size: 2rem;
+}
+
+// Don't fucking touch -----------------------------
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+// NavBar -------------------------------------------
+
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100px;
+  padding: 0;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+  background-color: #323232;
+  top: 0;
+  margin-bottom: 0px;
+
+@media screen and (min-width: 321px) {
+  height: 80px;
+}
+@media screen and (min-width: 900px) {
+  .nav-bar {
+    padding-left: 180px;
+  }
+}
+
+  &__logo {
+    margin: 1rem;
+    margin-left: 7rem;
+    margin-right: 6rem;
+    margin-bottom: 16px;
+    @media screen and (min-width: 900px) {
+      margin-right: 56px;
+    }
+  }
+
+  &__item-1 {
+    padding-left: 4rem;
+    padding-right: 2rem;
+    color: #FAFAFA;
+    text-decoration: none;
+    &:hover {
+      color: darksalmon;
+    }
+
+  @media screen and (min-width: 321px) {
+    padding-left: 0px;
+  }
+  @media screen and (min-width: 900px) {
+    margin-right: 56px;
+    padding-right: 0px;
+    width: 80px;
+  }
+  }
+
+  &__item-2 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: #FAFAFA;
+    text-decoration: none;
+    &:hover {
+      color:  darksalmon;
+    }
+
+    @media screen and (min-width: 900px) {
+      margin-left: 0px;
+      padding-left: 0px;
+      width: 80px;
+    }
+  }
+}
+
+
+// Hero Container -----------------------------------
+
+
+.hero-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: row;
+  margin-top: 0;
+  margin-bottom: 1em;
+
+  @media screen and (min-width: 768px) {
+    justify-content: flex-start;
+  }
+
+  &__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5 #323232;
+  }
+
+  &__text {
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 3rem;
+    left: 2rem;
+    margin: 0;
+    color: whitesmoke;
+    font-size: 24px;
+    font-weight: bold;
+// MEDIA QUERY - TABLET 
+  @media screen and (min-width: 321px) {
+    font-size: 60px;
+    width: 50%;
+  }
+  @media screen and (min-width: 900px) {
+    width: 50%;
+    margin-left: 180px;
+  }
+  }
+}
+
+
+// Heading ---------------------------------------------
+
+
+.heading {
+  width: 288px;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0;
+  margin-top: 32px;
+  margin-bottom: 24px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media screen and (min-width: 321px) {
+  .heading {
+    width: 720px;
+    font-size: 60px;
+    font-weight: bold;
+    margin-left: 24px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .heading {
+    margin-left: 180px;
+    margin-bottom: 48px;
+  }
+}
+// Quote and Band Image -----------------------------
+
+
+.layout-card {
+  display: flex;
+  width: 288px;
+  flex-direction: column;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 0px;
+
+  &__image {
+    width: 100%;
+  }
+
+  &__quote {
+    margin-top: 0;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 40px;
+    font-size: 24px;
+    margin-left: 0px;
+  }
+
+  &__description {
+    margin-left: 1rem;
+    font-size: 24px;
+    margin-left: 0px;
+// MEDIA QUERY - TABLET 
+    @media screen and (min-width: 321px) {
+      font-size: 36px;
+    }
+  }
+}
+
+
+@media screen and (min-width: 321px) {
+  .layout-card { 
+    width: 720px;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .layout-card {
+    width: 896px;
+    margin-left: 274px;
+    margin-right: 274px;
+    margin-bottom: 56px;
+  }
+}
+
+
+
+// About Us ------------------------------------------
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 0;
+  
+    &__title {
+      margin-top: 0;
+      margin-bottom: 24px;
+      font-size: 24px;
+      line-height: 32px;
+
+      @media screen and (min-width: 321px) {
+        font-size: 36px;
+      }
+      @media screen and (min-width: 900px) {
+        margin-bottom: 32px;
+      }
+      
+    }
+  
+      &__description {
+        width: 288px;
+        margin-bottom: 32px;
+        margin-left: 0rem;
+        margin-right: 1rem;
+        font-size: 13px;
+        line-height: 18px;
+        @media screen and (min-width: 900px) {
+          width: 420px;
+          margin-bottom: 48px;
+        }
+      }
+    }
+
+@media screen and (min-width: 321px) {
+  .about-us {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-left: 24px;
+    margin-right: 24px;
+    width: 100vw;
+  }
+  &__description {
+    width: 348px;
+    margin-right: 24px;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 900px) {
+  .about-us {
+    margin-left: 0px;
+    margin-left: 274px;
+    display: block;
+  }
+}
+
+// Photo gallery Heading ----------------------
+
+
+.photo-gallery__heading {
+  color: black;
+  margin-top: 32px;
+  margin-bottom: 24px;
+  margin-left: 16px;
+  font-size: 24px;
+}
+
+// MEDIA QUERY - TABLET 
+@media screen and (min-width: 321px) {
+  .photo-gallery__heading {
+    width: 100%;
+    margin-right: 15rem;
+    margin-left: 24px;
+    font-size: 60px;
+  }
+}
+
+
+// Photo Gallery ----------------------------------------
+
+.photo-gallery {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  background-color: #FAFAFA;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 321px) {
+  .photo-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 0px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .photo-gallery {
+    padding-left: 160px;
+    padding-right: 160px;
+    padding-bottom: 40px;
+  }
+}
+
+// Photo Gallery Images -------------------------------
+
+
+.photo-card {
+  display: flex;
+  width: 288px;
+  flex-direction: column;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  &__image {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 321px) {
+  .photo-card {
+    width: 224px;
+    margin-bottom: 24px;
+    margin-left: 24px;
+    margin-right: 0px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .photo-card {
+    width: 344px;
+  }
+}
+
+// ---------------------------footer --------------------------------
+
+
+
+.footer {
+  background-color: #323232;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-bottom: 2rem;
+  margin-top:40px;
+  
+  @media screen and (min-width: 900px) {
+    padding-left: 400px;
+  }
+
+  .footer-containerOne {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 321px) { 
+      flex-direction: row;
+      width: 720px;
+    }
+
+  }
+
+  &__header {
+    color: #FAFAFA; 
+// MEDIA QUERY - TABLET 
+  @media screen and (min-width: 321px) {
+  margin-right: 48px;
+  width: 350px;
+  font-size: 60px;
+  }
+  }
+
+  .social {
+    @media screen and (min-width: 321px) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  &__social {
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+// MEDIA QUERY - TABLET 
+  @media screen and (min-width: 321px) {
+      display: inline-block;
+      margin-top: 25px;
+  }
+  }
+
+  .footer-containerTwo {
+    @media screen and (min-width: 321px) {
+      width: 100vw;
+    }
+  }
+
+  .footer-contacts {
+    @media screen and (min-width: 321px) {
+    width: 224px;
+    }
+  }
+
+  &__nav-name {
+    color: #FAFAFA;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+    padding-left: 0;
+  }
+  &__nav-address {
+    color: #FAFAFA;
+    font-size: 13px;
+    line-height: 18px;
+    padding-left: 0;
+  }
+  &__nav-email {
+    color: #FAFAFA;
+    font-size: 13px;
+    line-height: 18px;
+    padding-left: 0;
+  }
+
+  &__copyright {
+    color: #FAFAFA;
+    margin-bottom: 32px;
+    font-size: 13px;
+    line-height: 18px;
+    padding-left: 0;
+  }
+}
+
+// MEDIA QUERY - TABLET 
+@media screen and (min-width: 321px) {
+  .footer {
+    padding-left: 24px;
+  }
+  div {
+    width: 230px;
+    margin-right: 24px;
+    display: inline-block;
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .footer {
+    width: 1024px;
+    padding-left: 400px;
+
+  }
+}
+// Notes / Extra -----------------------------------
+
+// @media screen and (min-width: 321px) {
+// } ------ for tablets 
+// Means that once viewport has a min of 320px; the styles within the media query will activiate 
+// @media screen and (min-width: 900px) {
+// } ------ for laptops 
+
+
+
+
+
+// Page 2 - index2.html below:
+
+
+// Hero Container -----------------------------------
+
+
+.hero-container2 {
+  display: flex;
+  width: 100%;
+  height: 572px;
+  margin-top: 100px;
+  margin-bottom: 32px;
+  flex-direction: row;
+  margin-top: 0;
+  margin-right: 0px;
+  @media screen and (min-width: 321px) {
+    height: 770px;
+    padding-top: 70px;
+  }
+  @media screen and (min-width: 900px) {
+    margin-rigth: 344px;
+  }
+
+  &__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5 #323232;
+  }
+
+  &__text {
+    position: absolute;
+    left: 16px;
+    margin-top: 164px;
+    color: whitesmoke;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: bold;
+  @media screen and (min-width: 321px) {
+    font-size: 30px;
+    margin-top: 176px;
+    width: 50%;
+    margin-left: 24px;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 900px) {
+    width: 50%;
+    margin-left: 180px;
+    margin-bottom: 48px;
+  }
+  }
+  &__text-2 {
+    position: absolute;
+    left: 16px;
+    margin-top: 204px;
+    color: whitesmoke;
+    margin-bottom: 64px;
+    @media screen and (min-width: 321px) {
+      font-size: 60px;
+      line-height: 68px;
+      margin-left: 24px;
+      padding-top: 20px;
+    }
+    @media screen and (min-width: 900px) {
+      margin-left: 180px;
+      height: 250px;
+      width: 480px;
+    }
+}
+
+&__music {
+  position: absolute;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 380px;
+  color: whitesmoke;
+  border-radius: 5px;
+  @media screen and (min-width: 321px) {
+    width: 450px;
+    height: 150px;
+    margin-top: 480px;
+    margin-left: 24px;
+  }
+  @media screen and (min-width: 900px) {
+    width: 436px;
+    height: 146px;
+    margin-left: 50%;
+    margin-right: 180px;
+    margin-top: 20%;
+  }
+}
+}
+
+// -- -----------    ---SHOWS HEADING ---------- ------------- --
+
+.shows-heading {
+  margin-left: 16px;
+  margin-bottom: 40px;
+  @media screen and (min-width: 321px) {
+    font-size: 36px;
+    line-height: 44px;
+    display: block;
+    margin-left: 24px;
+  }
+  @media screen and (min-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 96px;
+    margin-top: 48px;
+    margin-left: 180px;
+    margin-right: 0px;
+  }
+}
+
+// ---------------- TOUR ---------------------------
+
+
+
+// -------------------- TOUR DATES AND LOCATIONS --------------
+
+.tour-date__title {
+  color: #E1E1E1;
+  margin-bottom: 16px;
+  @media screen and (min-width: 321px) {
+    margin-top: 0px;
+    margin-left: 0px;
+    height: 23px;
+  }
+}
+
+.tour-date__date {
+    font-size: 24px;
+    line-height: 32px;
+    color: black;
+    @media screen and (min-width: 321px) {
+      margin-left: 0px;
+      font-size: 18px;
+    }
+  }
+
+// ----------venue ---------------
+  
+.tour-venue__title {
+  color: #E1E1E1;
+  margin-bottom: 16px;
+  @media screen and (min-width: 321px) {
+    margin-top: 0px;
+    margin-left: 0px;
+    height: 23px;
+  }
+}
+
+.tour-venue__name {
+  font-size: 14px;
+  line-height: 22px;
+  color: black;
+  @media screen and (min-width: 321px) {
+    margin-left: 0px;
+    font-size: 18px;
+  }
+}
+
+// -----------location------------
+
+.tour-location__title {
+  color: #E1E1E1;
+  margin-bottom: 16px;
+  @media screen and (min-width: 321px) {
+    margin-top: 0px;
+    margin-left: 0px;
+    height: 23px;
+  }
+}
+
+.tour-location__city {
+  font-size: 14px;
+  line-height: 22px;
+  color: black;
+  @media screen and (min-width: 321px) {
+    margin-left: 0px;
+    font-size: 18px;
+  }
+}
+
+// ---------- buy now button --------------
+
+.buy-tickets {
+  color: #E1E1E1;
+  width: 288px;
+  height: 48px;
+  background-color: #323232;
+  border-radius: 6px;
+  @media screen and (min-width: 321px) {
+    margin-top: 30px;
+  }
+  @media screen and (min-width: 900px) {
+    width: 160px;
+    height: 48px;
+  }
+}
+
+
+// -- -------------------  JOIN THE CONVERSATION --------------- --
+
+.joinTheConvo-header {
+  margin-left: 16px;
+  margin-right: 16px;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 40px;
+  @media screen and (min-width: 321px) {
+    font-size: 60px;
+    line-height: 68px;
+  }
+  @media screen and (min-width: 900px) {
+    margin-left: 180px;
+  }
+}
+
+// ------------------ STUPID COMMENTS SECTION ----------------------
+
+.comments-section {
+  margin-left: 16px;
+  margin-right: 16px;
+  display: flex;
+  flex-direction: row;
+  @media screen and (min-width: 900px) {
+    width: 528px;
+    margin-left: 360px;
+  }
+}
+
+.frist-name__title {
+  margin-left: 0px;
+  margin-bottom: 5px;
+  color: #AFAFAF;
+  @media screen and (min-width: 321px) {
+    margin-left: 0px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  @media screen and (min-width: 900px) {
+  
+  }
+}
+
+.comments-image {
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  margin-top: 15px;
+  @media screen and (min-width: 321px) {
+    margin-left: 100px;
+  }
+}
+
+.comments-section__inputs {
+  margin-left: 20px;
+  @media screen and (min-width: 900px) {
+    width: 528px;
+    flex-direction: column;
+  }
+}
+
+.firstName {
+  margin-bottom: 15px;
+  height: 40px;
+  width: 200px; 
+  border: solid black 2px;
+  border-radius: 5px;
+  background-color: #FAFAFA;
+  @media screen and (min-width: 321px) {
+    margin-left: 0px;
+    width: 400px;
+  }
+  @media screen and (min-width: 900px) {
+    width: 460px;
+    margin-left: 0rem;
+  }
+}
+
+.comments-title__header {
+  margin-left: 0px;
+  margin-bottom: 5px;
+  color: #AFAFAF;
+  @media screen and (min-width: 321px) {
+    margin-left: 0px;
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 15px
+  }
+  @media screen and (min-width: 900px) {
+    margin-left:0px;
+  }
+}
+
+.comments-field {
+  background-color: #FAFAFA;
+  width: 200px; 
+  margin-left: 0px;
+  border: solid #E1E1E1 2px;
+  border-radius: 5px;
+  @media screen and (min-width: 321px) {
+    margin-left: 0px;
+    width: 400px;
+    margin-top: 5px;
+  }
+  @media screen and (min-width: 900px) {
+    width: 460px;
+    margin-left: 0rem;
+  }
+}
+
+
+// ----------Button ---------------
+
+.comments-submit {
+  margin-top: 10px;
+  width: 210px;
+  height: 40px;
+  color: #AFAFAF;
+  background-color: #323232;
+  margin-left: 0px;
+  margin-bottom: 32px;
+  border-radius: 5px;
+  @media screen and (min-width: 321px) {
+    width: 140px;
+    margin-left: 17rem;
+    margin-top: 15px;
+  }
+  @media screen and (min-width: 900px) {
+    width: 160px;
+    margin-left: 19rem;
+    margin-top: 24px;
+  }
+}
+
+// --------------------  USER COMMENT SECTION ------------------------------->
+
+.user-comment__container {
+  width: 288px;
+  margin-left: 16px;
+  margin-right: 16px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-top: solid #E1E1E1 1px;
+  border-bottom: solid #E1E1E1 1px;
+  display: flex;
+  flex-direction: row;
+  @media screen and (min-width: 321px) {
+    width: 550px;
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+  @media screen and (min-width: 900px) {
+    margin-left: 344px;
+  }
+}
+
+.usrImg {
+  padding-left: 10px;
+  padding-top: 24px;
+} 
+
+.user-comment__image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  margin-right: 24px;
+  @media screen and (min-width: 321px) {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+}
+
+.user-comment__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-comment__info-holder {
+  display: flex;
+  flex-direction: row;
+  margin-left: 0px;
+}
+
+.user-comment__name {
+  width: 112px;
+  font-size: 14px;
+}
+
+.user-comment__date {
+  width: 112px;
+  font-size: 14px;
+  color: #E1E1E1;
+}
+
+// ----------------------------    -----   OLD USER COMMENTS  -------   ------------------------------->
+
+.oldUser-comment__container {
+  width: 288px;
+  margin-left: 16px;
+  margin-right: 16px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-top: solid #E1E1E1 1px;
+  border-bottom: solid #E1E1E1 1px;
+  display: flex;
+  flex-direction: row;
+  @media screen and (min-width: 321px) {
+    width: 550px;
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+  @media screen and (min-width: 900px) {
+    margin-left: 344px;
+  }
+}
+
+.olUsrImg {
+  padding-left: 10px;
+  padding-top: 24px;
+} 
+
+.oldUser-comment__image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  margin-right: 24px;
+  @media screen and (min-width: 321px) {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+}
+
+.oldUser-comment__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.oldUser-comment__info-holder {
+  display: flex;
+  flex-direction: row;
+}
+
+.oldUser-comment__name {
+  width: 112px;
+  font-size: 14px;
+}
+
+.oldUser-comment__date {
+  width: 112px;
+  font-size: 14px;
+  color: #E1E1E1;
+}
+
+.shows-times-date {
+  margin-left: 16px;
+  margin-right: 16px;
+  width: 288px;
+  @media screen and (min-width: 321px) {
+    margin-left: 24px;
+    margin-right: 24px;
+    width: 720px;
+  }
+  @media screen and (min-width: 900px) {
+    width: 1024px;
+  }
+}
+
+.tour {
+  width: 288px;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 0px;
+  padding-bottom: 16px;
+  border-bottom: solid #AFAFAF 1px;
+  @media screen and (min-width: 321px) {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    width: 720px;
+    margin-left: 24px;
+    margin-right: 24px;
+    padding-bottom: 0px;
+    padding-top: 10px;
+  }
+  @media screen and (min-width: 900px) {
+    width: 804px;
+    margin-right: 180px;
+    margin-left: 420px;
+    margin-top: 0px;
+  }
+}
